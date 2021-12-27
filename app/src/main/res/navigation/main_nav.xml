@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/currentTimeFragment">
+
+    <fragment
+        android:id="@+id/currentTimeFragment"
+        android:name="com.example.timezone.view.fragment.CurrentTimeFragment"
+        android:label="fragment_current_time"
+        tools:layout="@layout/fragment_current_time" >
+        <action
+            android:id="@+id/action_currentTimeFragment_to_timeZoneTimeFragment"
+            app:destination="@id/timeZoneTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeZoneTimeFragment"
+        android:name="com.example.timezone.view.fragment.TimeZoneTimeFragment"
+        android:label="fragment_time_zone_time"
+        tools:layout="@layout/fragment_time_zone_time" />
+</navigation>
